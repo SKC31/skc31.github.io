@@ -1,0 +1,34 @@
+:root{
+  --bg:#fff; --muted:#6b7280; --accent:#2b6cb0; --card:#f8fafc;
+  --max-width:1100px;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#111;line-height:1.45}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:10}
+.site-header .container{display:flex;align-items:center;gap:1rem}
+.brand{margin:0;font-size:1.25rem;color:var(--accent)}
+.site-header nav{margin-left:auto;display:flex;gap:.5rem;align-items:center}
+.site-header input{padding:.5rem .75rem;border:1px solid #ddd;border-radius:6px}
+.hero{padding:1.5rem 0}
+.controls{display:flex;gap:1rem;flex-wrap:wrap;padding:.5rem 0}
+.controls label{display:flex;flex-direction:column;font-size:.9rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--card);padding:1rem;border-radius:10px;border:1px solid #eee;display:flex;flex-direction:column;gap:.5rem}
+.card h3{margin:.2rem 0;font-size:1.05rem}
+.card p{margin:0;color:var(--muted);font-size:.9rem}
+.card .meta{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+.button{background:var(--accent);color:#fff;padding:.45rem .65rem;border-radius:8px;border:none}
+.submit{margin:2rem 0;padding:1rem;background:#fbfbfc;border-radius:8px;border:1px solid #f0f0f0}
+.submit form{display:flex;flex-direction:column;gap:.5rem}
+.submit input,.submit select,.submit textarea{padding:.6rem;border:1px solid #ddd;border-radius:8px;width:100%}
+.site-footer{padding:1rem 0;color:var(--muted);border-top:1px solid #eee;margin-top:2rem}
+
+/* modal styling */
+dialog{width:90%;max-width:720px;border-radius:10px;border:none;padding:1rem;box-shadow:0 10px 30px rgba(0,0,0,0.15)}
+dialog::backdrop{background:rgba(0,0,0,0.3)}
+#close-modal{position:absolute;right:1rem;top:1rem;border:none;background:transparent;font-size:1.1rem}
+@media(min-width:900px){
+  .hero{display:flex;justify-content:space-between;align-items:center}
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zambia Kitchen — Authentic Zambian Recipes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Zambia Kitchen</h1>
+      <nav>
+        <button id="btn-filters" aria-expanded="false">Filters</button>
+        <input id="search" type="search" placeholder="Search recipes or ingredients…" aria-label="Search recipes" />
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Discover Zambian flavors</h2>
+      <p>Traditional dishes, family recipes, and modern takes on classic relishes.</p>
+    </section>
+
+    <section class="controls" id="controls">
+      <label>
+        Category
+        <select id="category">
+          <option value="">All</option>
+          <option>Relish</option>
+          <option>Staple</option>
+          <option>Snack</option>
+          <option>Soup</option>
+        </select>
+      </label>
+
+      <label>
+        Sort
+        <select id="sort">
+          <option value="popular">Popular</option>
+          <option value="newest">Newest</option>
+          <option value="alpha">A → Z</option>
+        </select>
+      </label>
+    </section>
+
+    <section id="recipes" class="grid" aria-live="polite">
+      <!-- recipe cards injected here -->
+    </section>
+
+    <section class="submit">
+      <h3>Share a recipe</h3>
+      <form id="submit-recipe">
+        <input name="title" placeholder="Recipe title" required />
+        <input name="author" placeholder="Your name" />
+        <select name="category">
+          <option value="Relish">Relish</option>
+          <option value="Staple">Staple</option>
+          <option value="Snack">Snack</option>
+          <option value="Soup">Soup</option>
+        </select>
+        <textarea name="ingredients" placeholder="Ingredients (comma separated)" required></textarea>
+        <textarea name="steps" placeholder="Preparation steps" required></textarea>
+        <button type="submit">Submit (client-only)</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Zambia Kitchen · Built for sharing traditional Zambian recipes</small>
+    </div>
+  </footer>
+
+  <!-- Recipe detail modal -->
+  <dialog id="recipe-modal" aria-labelledby="modal-title">
+    <button id="close-modal" aria-label="Close">✕</button>
+    <h3 id="modal-title"></h3>
+    <p class="meta"></p>
+    <h4>Ingredients</h4>
+    <ul id="modal-ingredients"></ul>
+    <h4>Steps</h4>
+    <ol id="modal-steps"></ol>
+    <p><button id="fav-btn">Add to favorites</button></p>
+  </dialog>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
